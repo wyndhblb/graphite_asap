@@ -6,3 +6,4 @@ graphite_asap.iml
 .DS_Store
 build
 dist
+/graphite_asap.egg-info/
