@@ -49,7 +49,7 @@ def ASAP(requestContext, seriesList, resolution=1000):
         if windowInterval:
             # the resolution here is really the number of points to maintain
             # so we need to convert the "seconds" to num points
-            windowPoints = (series.end - series.start) // windowInterval
+            windowPoints = round((series.end - series.start) / windowInterval)
         else:
             use_res = int(resolution)
             if len(series) < use_res:
@@ -82,7 +82,7 @@ def ASAP(requestContext, seriesList, resolution=1000):
             # to get the best view for things
             new_s = smooth(series, windowPoints)
             # seems float "steps" are approved
-            new_step = (series.end - series.start) / len(new_s)
+            new_step = round((series.end - series.start) / len(new_s))
             newSeries.step = new_step
             newSeries.extend(smooth(series, windowPoints))
         result.append(newSeries)
