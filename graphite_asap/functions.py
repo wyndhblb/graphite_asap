@@ -61,8 +61,7 @@ def ASAP(requestContext, seriesList, resolution=1000):
         else:
             newName = "asap(%s,%s)" % (series.name, resolution)
 
-        step_guess = (series.end - series.start) / \
-            windowPoints  # seems float "steps" are approved
+        step_guess = (series.end - series.start) // windowPoints
 
         newSeries = TimeSeries(
             newName,
