@@ -1,0 +1,8 @@
+pythonlib
+*.pyo
+*.pyc
+.idea
+graphite_asap.iml
+.DS_Store
+build
+dist

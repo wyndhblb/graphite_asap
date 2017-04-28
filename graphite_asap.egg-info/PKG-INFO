@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: graphite-asap
+Version: 0.0.1
+Summary: Graphite API ASAP function hooks
+Home-page: UNKNOWN
+Author: bo
+Author-email: bblanton@underarmour.com
+License: Apache 2
+Description: # Graphite-ASAP
+        
+        This is a graphite-api function for the ASAP dynamic smoothing algorithm
+        
+        https://arxiv.org/pdf/1703.00983.pdf
+        
+        ## usage
+        
+        In the `graphite-api.yaml` file install this package and then add to the functions list
+        
+            functions:
+                - graphite_asap.functions.ASAPFunctions
+        
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: System :: Monitoring
+Classifier: License :: OSI Approved :: Apache Software License
