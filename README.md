@@ -4,6 +4,8 @@ This is a graphite-api function for the ASAP dynamic smoothing algorithm
 
 https://arxiv.org/pdf/1703.00983.pdf
 
+http://github.com/stanford-futuredata/ASAP
+
 # NOTE ABOUT GRAPHITE API
 
 this requires the MAIN BRANCH of graphite-api, the current 1.1.3 version is not really up-to-date
@@ -53,3 +55,8 @@ And in your favorite query engine
     
     # attempt to get a vector that has roughly this number of points
     http://xxx/render?target=asap(path.to.metric, 100)
+
+
+## In action
+ 
+![asapdemo](./asap_demo.png "asapdemo")
