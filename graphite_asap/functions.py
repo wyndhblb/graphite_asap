@@ -80,10 +80,10 @@ def ASAP(requestContext, seriesList, resolution=1000):
             # the algo will alter it some inorder
             # to get the best view for things
             new_s = smooth(series, windowPoints)
-            # seems float "steps" are approved
+            # steps need to be ints, so we must force the issue
             new_step = round((series.end - series.start) / len(new_s))
             newSeries.step = new_step
-            newSeries.extend(smooth(series, windowPoints))
+            newSeries.extend(new_s)
         result.append(newSeries)
 
     return result
