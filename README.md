@@ -6,13 +6,18 @@ https://arxiv.org/pdf/1703.00983.pdf
 
 http://github.com/stanford-futuredata/ASAP
 
-# NOTE ABOUT GRAPHITE API
+# NOTE: ABOUT GRAPHITE API
 
 this requires the MAIN BRANCH of graphite-api, the current 1.1.3 version is not really up-to-date
 
     pip install --upgrade git+https://github.com/brutasse/graphite-api
     
-    
+
+# Install
+
+    pip install --upgrade git+https://github.com/wyndhblb/graphite_asap
+
+
 ## Note On Nulls
 
 If you data as "nulls/Nones" in the data list, it will FORCE them to be 0, otherwise
@@ -46,6 +51,7 @@ floating point precision will loose (or gain) too much time between steps.
 In the `graphite-api.yaml` file install this package and then add to the functions list
 
     functions:
+        - ... the other functions ...
         - graphite_asap.functions.ASAPFunctions
 
 And in your favorite query engine
